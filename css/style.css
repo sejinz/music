@@ -90,11 +90,13 @@ figure section article .inner .txt{
     z-index: 3;
 }
 figure section article .inner .txt h2{
+    letter-spacing: 0.7px;
     font-size: 20px;
     color: #222;
     margin-bottom: 0.8vh;
 }
 figure section article .inner .txt p{
+    letter-spacing: 0.7px;
     font-size: 12px;
     margin-bottom: 2vh;
     color: #777;
