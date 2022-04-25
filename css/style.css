@@ -18,7 +18,6 @@ a{
 figure section { /*음악 플레이어 패널 프레임 그룹*/
     width: 200px;
     height: 280px;
-    margin: 100px auto;
     background: #f0f7ff;
 }
 figure section article .inner { /*음악 플레이어 패널 콘텐츠 그룹*/
