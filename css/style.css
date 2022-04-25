@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "DungGeunMo";
 }
 ul, li, ol{
     list-style: none;
@@ -90,7 +91,6 @@ figure section article .inner .txt{
 }
 figure section article .inner .txt h2{
     font-size: 20px;
-    font-family: Rubik;
     color: #222;
     margin-bottom: 0.8vh;
 }
