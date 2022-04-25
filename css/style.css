@@ -1,0 +1,139 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+/* reset  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul, li, ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    outline: 0;
+}
+
+/* //뮤직 플레이어 패널 프레임  */
+figure section { /*음악 플레이어 패널 프레임 그룹*/
+    width: 200px;
+    height: 280px;
+    margin: 100px auto;
+    background: #f0f7ff;
+}
+figure section article .inner { /*음악 플레이어 패널 콘텐츠 그룹*/
+	width: 100%;
+	height: 100%;
+	background: #f0f7ff;
+	padding: 3vh 2.5vw 3vh;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-content: space-between; /*자식 콘텐츠의 안쪽 세로 여백을 균등 배치*/
+	flex-wrap: wrap;
+	border-radius: 10px;
+	box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+	opacity: 0.6; /*투명도를 낮춰서 비활성화*/
+	transform: scale(0.8); /*축소시켜서 비활성화*/
+    transition: opacity 1s, transform 1s;
+}
+figure section article.on .inner{
+    opacity: 0.9;
+    transform: scale(1.1);
+}
+figure section article .inner .pic{
+    background-image:url(../images/member8.jpg);
+    width: 15vw;
+    height: 15vw;
+    background-color: rgb(167, 167, 167);
+    margin: 10px auto;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: 200%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+figure section article .inner .pic::before,
+figure section article .inner .pic::after{
+    content: "";
+    display: block;
+    width: inherit;
+    height: inherit;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: inherit;
+    background-position: center;
+    background-repeat: inherit;
+    background-size: cover;
+    transform-origin: center center;
+}
+figure section article .inner .pic::before{
+    transform: translateY(10%);
+    filter: blur(20px) brightness(1.5);
+}
+figure section article .inner .pic .dot{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background: #e4f1ff;
+    position: relative;
+    z-index: 3;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+figure section article .inner .txt{
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+figure section article .inner .txt h2{
+    font-size: 20px;
+    font-family: Rubik;
+    color: #222;
+    margin-bottom: 0.8vh;
+}
+figure section article .inner .txt p{
+    font-size: 12px;
+    margin-bottom: 2vh;
+    color: #777;
+}
+figure section article .inner .txt ul{
+    display: flex;
+    justify-content: space-around;
+}
+figure section article .inner .txt ul li{
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.5s;
+}
+figure section article .inner .txt ul li.play{
+    transform: scale(1.5);
+    opacity: 0.9;
+}
+figure section article .inner .txt ul li:hover{
+    transform: scale(1.5);
+    opacity: 0.8;
+}
+figure section article .inner .txt ul li.play:hover{
+transform: scale(2);
+opacity: 1;
+}
+/* 씨디 돌아가기  */
+figure section article .inner .pic.on::after{
+    animation: ani 4s linear infinite;
+}
+figure section article .inner .pic.on::before{
+    animation: ani2 4s linear infinite;
+}
+@keyframes ani {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+@keyframes ani2 {
+    0% {transform: translateY(10%) rotate(0deg);}    
+   100% {transform: translateY(10%) rotate(360deg);}    
+}
+
