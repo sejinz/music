@@ -16,9 +16,9 @@ a{
 
 /* //뮤직 플레이어 패널 프레임  */
 figure section { /*음악 플레이어 패널 프레임 그룹*/
-    width: 200px;
-    height: 280px;
+    width: 190px;
     background: #f0f7ff;
+    margin: 100px auto;
 }
 figure section article .inner { /*음악 플레이어 패널 콘텐츠 그룹*/
 	width: 100%;
